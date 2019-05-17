@@ -78,5 +78,45 @@
 # n = int(input("请输入n的值："))
 # print(jch(n))
 
-def sxh(n):
-    if n[0]
+# def sxh():  #求所有的水仙花数
+#     S = []  #保存水仙花数
+#     for n in range(100,999):
+#         if int(str(n)[0])**3+int(str(n)[1])**3+int(str(n)[2])**3 == n:
+#             S.append(str(n))
+#     print('所有水仙花数：'+' '.join(S))
+#     return True
+# sxh()
+
+# def zdgys(m,n):   # 辗转相除法求最大公约数
+#     x = m % n
+#     while (x != 0):
+#         m = n
+#         n = x
+#         x = m % n
+#     return n
+# def zdgbs(x, y):   # 求最大公倍数
+#     if x > y:
+#         max = x
+#     else:
+#         max = y
+#     while (True):
+#         if ((max % x == 0) and (max % y == 0)):
+#             zdgbs = max
+#             break
+#         max += 1
+#     return zdgbs
+# m,n= input("请输入两个数(空格隔开)：").split()
+# print(m,n+'的最大公约数:',zdgys(int(m),int(n)))
+# print(m,n+'的最小公倍数:',zdgbs(int(m),int(n)))
+
+i = 1
+
+while i<=3:
+
+    print("yes")
+
+    i += 1
+
+else:
+
+    print("no")
