@@ -109,18 +109,18 @@
 # print(m,n+'的最大公约数:',zdgys(int(m),int(n)))
 # print(m,n+'的最小公倍数:',zdgbs(int(m),int(n)))
 
-def qhe(n):    # 求1/(1*2)-1/(2*3)+1/(3*4)-...前n项的和。
-    sum = 0
-    a = 1
-    b = 1
-    c = 2
-    d = 0
-    while d < n:
-        sum += a / (b * c)
-        a = - a
-        b+=1
-        c+=1
-        d+=1
-    return sum
-n = int(input('请输入n：'))
-print(qhe(n))
+# def qhe(n):    # 求1/(1*2)-1/(2*3)+1/(3*4)-...前n项的和。
+#     sum = 0
+#     a = 1
+#     b = 1
+#     c = 2
+#     d = 0
+#     while d < n:
+#         sum += a / (b * c)
+#         a = - a
+#         b+=1
+#         c+=1
+#         d+=1
+#     return sum
+# n = int(input('请输入n：'))
+# print(qhe(n))
