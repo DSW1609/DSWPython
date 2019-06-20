@@ -18,16 +18,17 @@
 #     newname = f[:-4] + '_new.txt'
 #     os.rename(f,newname)
 
-file = "D:\DSW\Python\TXTcs\yingwen.txt"
-fp = open(file,'r')
-data = fp.readline()
-fp.close()
-N = []
-for i in data:
-    if i>='A' and i <='Z':
-        i = i.lower()
-        N.append(i)
-    else:
-        i = i.upper()
-        N.append(i)
-print(''.join(N))
+# file = "D:\DSW\Python\TXTcs\yingwen.txt"
+# fp = open(file,'r')
+# data = fp.readline()
+# fp.close()
+# N = []
+# for i in data:
+#     if i>='A' and i <='Z':
+#         i = i.lower()
+#         N.append(i)
+#     else:
+#         i = i.upper()
+#         N.append(i)
+# print(''.join(N))
+
