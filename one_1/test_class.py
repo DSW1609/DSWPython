@@ -43,25 +43,27 @@
 # print('周长:',bj.zhouchang())
 # print('面积:',bj.area())
 
-class Animal:
-    def __init__(self,color):
-        self.__color = color
-    def call(self):
-        print("叫声:嗷嗷")
-    def out(self):
-        print("颜色",self.__color)
-        self.call()
-class Fish(Animal):
-    def __init__(self,color,tail):
-        Animal.__init__(self,color)
-        self.__tail = tail
-    def call(self):
-        print("叫声:凸凸")
-    def out(self):
-        Animal.out(self)
-        print("尾巴",self.__tail)
-c1 = Animal('red')
-c1.out()
-c2 = Fish('blue','三角形')
-c2.out()
-
+# class Animal:
+#     def __init__(self,color):
+#         self.__color = color
+#     def call(self):
+#         print("叫声:嗷嗷")
+#     def out(self):
+#         print("颜色",self.__color)
+#         self.call()
+# class Fish(Animal):
+#     def __init__(self,color,tail):
+#         Animal.__init__(self,color)
+#         self.__tail = tail
+#     def call(self):
+#         print("叫声:凸凸")
+#     def out(self):
+#         Animal.out(self)
+#         print("尾巴",self.__tail)
+# c1 = Animal('red')
+# c1.out()
+# c2 = Fish('blue','三角形')
+# c2.out()
+s1={1,2,3}
+s1.add(9)
+print(max(s1))
