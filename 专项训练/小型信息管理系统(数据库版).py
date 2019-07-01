@@ -100,7 +100,7 @@ class stuDB:
             print("请将信息输入完整")
     def export(self):
         try:
-            fn = input("请输入要导出的文件路径与名称:")
+            fn = input("请输入要导出的文件路径:")
             with open(fn,"w") as fp:
                 self.cur.execute("select * from stu")
                 rows = self.cur.fetchall()
