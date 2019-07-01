@@ -100,7 +100,7 @@ def main():
                 print("已为您自动保存！")
                 print("再见！")
             break
-        elif key > "7"  or key < "1":
+        else:
             print("输入错误请重新输入！")
             continue
 # 运行main
