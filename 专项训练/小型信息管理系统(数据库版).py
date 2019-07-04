@@ -24,6 +24,20 @@ class stuDB:
         rows = self.cur.fetchall()
         for row in rows:
             print(formatstr.format(str(row[0]).strip(),row[1],row[2],str(row[3]).strip()))
+    def __find(self,no):
+        if not self.__exists(no):
+            print("该员工不存在")
+        else:
+            formatstr = "{:5}\t{:5}\t{:5}\t{:5}"
+            print(formatstr.format("工号", "姓名", "性别", "年龄"))
+            sql = "select * from stu where no = ?"
+            result = self.cur.execute(sql, (no,))
+            rows = result.fetchall()
+            for row in rows:
+                print(formatstr.format(str(row[0]).strip(), row[1], row[2], str(row[3]).strip()))
+    def find(self):
+        no = int(input("请输入要查询的工号:"))
+        self.__find(no)
     def __enterAge(self):
         while True:
             age = int(input("年龄："))
@@ -129,14 +143,15 @@ class stuDB:
         self.connect(db)
         print(("信息管理系统V3.0").center(20))
         print("1.显示员工信息", end='  ')
-        print("2.插入员工信息")
-        print("3.删除一个员工", end='  ')
-        print("4.修改员工信息")
-        print("5.导出员工数据", end='  ')
-        print("6.导入员工数据")
-        print("7.退出管理系统")
+        print("2.查询员工信息")
+        print("3.插入员工信息", end='  ')
+        print("4.删除一个员工")
+        print("5.修改员工信息", end='  ')
+        print("6.导出员工数据")
+        print("7.导入员工数据", end='  ')
+        print("8.退出管理系统")
         while True:
-            print("请选择:显示|插入|删除|修改|导出|导入|退出")
+            print("请选择:显示|查询|插入|删除|修改|导出|导入|退出")
             s = input(">").strip().lower()
             if s == "显示":
                 self.show()
@@ -150,6 +165,8 @@ class stuDB:
                 self.export()
             elif s == "导入":
                 self.load()
+            elif s == "查询":
+                self.find()
             elif s =="退出":
                 print("再见！")
                 break
