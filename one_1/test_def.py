@@ -124,3 +124,6 @@
 #     return sum
 # n = int(input('请输入n：'))
 # print(qhe(n))
+
+for i in range(5):
+    print("*"*(i+1))
